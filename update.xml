@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns="http://www.google.com/update2/response" protocol="2.0">
     <app appid="aaa">
-        <updatecheck codebase="https://github.com/lszhu/test/blob/master/ShoppingHelper.crx?raw=true"
+        <updatecheck codebase="http://wsdl25.yunpan.cn/share.php?method=Share.download&fhash=95742b0b55b1e8e66786a3dc404aa9dcdfbf4f58&xqid=182469054&fname=ShoppingHelper.crx&fsize=339235&nid=13821975542920793&cqid=1665ab887ab841c9ce09d156b4775d7d&st=490210759c7d66709a55b70012276e33&e=1382370382&dt=25.17ce2d33bb9a2d5d36dfa8eebbb4bee5"
                      version="0.99.2" />
     </app>
 </gupdate>
