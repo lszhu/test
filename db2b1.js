@@ -1,13 +1,3 @@
-/**
- *
- * User: Jason
- * Date: 13-9-8
- * Time: 上午12:24
- *
- */
-
-!function () {
-    var db = [
         [
             "X3QRfWt6zT8LiDg0", "tyMjXrz285gLoxM3"
         ],
@@ -88,8 +78,3 @@
             "e0mtTz25F67cckAA", "CpdhgYNEU/8cIz2a", "xEbtq5oNkgVNWPlM",
             "VzDCadcBGQl6pes7", "Vi8OY8DUAEA5Rcwf"
         ]
-    ];
-    var data = [];
-    data[8] = db;
-    commander.setter(data);
-}();
