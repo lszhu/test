@@ -1,0 +1,6 @@
+Native Client is an open-source technology for running native compiled code in the browser, 
+with the goal of maintaining the OS portability and safety that people expect from web apps.
+Native Client expands web programming beyond JavaScript, 
+enabling developers to enhance their web applications using their preferred language. 
+This document describes a few of the key benefits of Native Client, 
+as well as current limitations, common use cases, and tips for getting started with Native Client.
