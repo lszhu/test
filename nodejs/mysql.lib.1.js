@@ -24,12 +24,12 @@ connection.query(
 
 connection.query(
     'insert into recorder set title= ?, text = ?, created = ?',
-    ['super cool', 'this is a nice text', '2013-03-22 12:53:53']
+    ['super cool', 'this is a nice text', '2013-09-12 16:32:43']
 );
 
 var query = connection.query(
     'insert into recorder set title = ?, text = ?, created = ?',
-    ['another entry', 'tow entries make a better test', '2013-03-22 12:53:53']
+    ['another entry', 'tow entries make a better test', '2014-03-22 12:53:53']
 );
 
 connection.query(
