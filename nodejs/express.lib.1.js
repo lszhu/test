@@ -10,6 +10,10 @@ app.get('/', function(req, res) {
     res.send('hello express.');
 });
 
+app.get(/yes(\d+)(abc)/, function(req, res) {
+    res.send(req.params[0] + ": " + req.params[1]);
+});
+
 app.get('/:id?', function(req, res) {
     if (req.params.id) {
         res.send(req.params.id);
@@ -21,6 +25,7 @@ app.get('/:id?', function(req, res) {
 app.get('/wildcard/a*', function(req, res) {
     res.send('word headed with alphabet a');
 });
+
 app.get('*', function(req, res) {
     res.send('query host is: ' + req.host + '<br />' +
         'query path is: ' + req.path);
