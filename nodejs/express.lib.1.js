@@ -14,6 +14,10 @@ app.get(/yes(\d+)(abc)/, function(req, res) {
     res.send(req.params[0] + ": " + req.params[1]);
 });
 
+app.get('/:id(\\d+)', function(req, res) {
+    res.send('only match digits and stored in params: ' + req.params.id);
+});
+
 app.get('/:id?', function(req, res) {
     if (req.params.id) {
         res.send(req.params.id);
