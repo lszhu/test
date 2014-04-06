@@ -17,3 +17,11 @@ app.get('/:id?', function(req, res) {
         res.send('oh hai');
     }
 });
+
+app.get('/wildcard/a*', function(req, res) {
+    res.send('word headed with alphabet a');
+});
+app.get('*', function(req, res) {
+    res.send('query host is: ' + req.host + '<br />' +
+        'query path is: ' + req.path);
+});
