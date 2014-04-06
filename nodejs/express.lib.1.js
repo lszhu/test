@@ -30,6 +30,18 @@ app.get('/wildcard/a*', function(req, res) {
     res.send('word headed with alphabet a');
 });
 
+app.get('/users/:id', function(req, res, next) {
+    var id = req.params.id;
+    if (id === 'jason') {
+        res.send('you are not allowed, ' + req.params.id);
+    } else {
+        next();
+    }
+});
+app.get('/users/:id', function(req, res) {
+    res.send('hello ' + req.params.id);
+});
+
 app.get('*', function(req, res) {
     res.send('query host is: ' + req.host + '<br />' +
         'query path is: ' + req.path);
