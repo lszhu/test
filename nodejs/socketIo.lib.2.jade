@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        title= pageTitle
+        script(src="/socket.io/socket.io.js")
+    body
+        h1 Hello, World
+        p This is an example of Socket.IO.
+        script.
+            var c1 = io.connect('http://localhost:3000/upandrunning');
+            var c2 = io.connect('http://localhost:3000/weather');
+            c1.on('message', function(data) {
+                console.log(data);
+                var p = document.createElement('p');
+                p.innerHTML = '<br /><br />Node: Up and Running Update<br />' +
+                    data.toString();
+                document.body.appendChild(p);
+            });
+            c2.on('message', function(data) {
+                console.log(data);
+                var p = document.createElement('p');
+                p.innerHTML = '<br /><br />Node: Weather Update<br />' +
+                    data.toString();
+                document.body.appendChild(p);
+            });
