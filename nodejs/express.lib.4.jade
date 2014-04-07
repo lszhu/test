@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        title =pageTitle
+    body
+        h1 Authentication
+        p Everyone should be authenticated to browse the website.
+        form(action="/auth" method="post")
+            span username:
+            input(type="text" name="user" placeholder="username")
+            br
+            br
+            span password:
+            input(type="password" name="password" placeholder="password")
+            br
+            br
+            input(type="submit" value="auth")
