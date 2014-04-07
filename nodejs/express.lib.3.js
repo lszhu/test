@@ -11,3 +11,9 @@ app.get('/', function(req, res) {
     res.render(__dirname + '/express.lib.3.jade',
         {pageTitle: 'Jade Example', layout: false});
 });
+
+app.use('view engine', 'jade');
+app.get('/jadeSubView', function(req, res) {
+    res.render(__dirname + '/express.lib.3.main.jade',
+        {pageTitle: 'Jade with sub view', hello: 'Hello world!'});
+});
