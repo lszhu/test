@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        title= pageTitle
+        script(src="/socket.io/socket.io.js")
+    body
+        h1 Hello, World
+        p This is an example of Socket.IO.
+        script.
+            var socket = io.connect('http://localhost:3000');
+            socket.on('news', function(data) {
+                console.log(data);
+                var p = document.createElement('p');
+                p.innerHTML = '<br /><br />Node: Up and Running Update<br />' +
+                    data.contents;
+                document.body.appendChild(p);
+                setTimeout(function() {
+                    socket.emit('scoop', {contents: 'subscribe news.'});
+                }, 2000);
+            });
