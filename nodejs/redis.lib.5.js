@@ -26,4 +26,5 @@ client.zcard('contestants', function(err, length) {
     client.zrange('contestants', 2 * n, length, function(err, values) {
         console.log('Elder team: ' + values);
     });
+    client.end();
 });
